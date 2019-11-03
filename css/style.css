@@ -1,0 +1,150 @@
+.navbar {
+    height: 45px;
+    padding: 0;
+}
+
+.btn{
+    margin-top: 10px;
+}
+
+body{
+    background: rgb(221, 221, 221);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+}
+
+header h1{
+    color: gray;
+    font-size: 1.5em;
+    padding: 4px 4px 4px 150px;
+    margin: 0px;
+    width: 70%;
+}
+
+.nav-item{
+    margin: 0px;
+}
+
+.menudesplegado {
+    margin-top: -5.9px;
+    border: 0.1px solid white;
+}
+
+.modal-header {
+    height: 140px;
+    display: block;
+}
+
+
+textarea {
+    border-radius: 5px;
+}
+
+.modal-header-icons {
+    padding: 0;
+    display: flex;
+}
+
+.modal-header-icons div{
+    margin-right: 5px;
+}
+
+.modal-footer {
+    background: rgba(236, 236, 236, 0.89);
+}
+
+.nav-pills{
+    background: white;
+    padding: 0;
+}
+
+.nav-pills .pill-1{
+    margin: 5px 0 5px auto;
+    width: 40px;
+    height: 30px;
+}
+
+
+.nav-pills .pill-2{
+    margin: 5px auto 5px 0;
+    width: 40px;
+    height: 30px;
+}
+
+.nav-pills .nav-link{
+    color: gray;
+    padding: 1px 15.5px;
+}
+
+.nav-pills .nav-link.active{
+    background-color: gray;
+    width: 40px;
+    height: 30px;
+     
+}
+
+.icontam {
+    font-size: 0.6em;
+    
+}
+
+div.pill-right{
+    width: 700px;
+    margin: auto;
+    background: white;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.header-pill-right div:first-child{
+    display: inline-block;
+      
+}
+
+.header-pill-right div:last-child{
+    display: inline-block;
+    width: 28%;
+    text-align: right;
+    color: rgb(201, 201, 201);
+}
+
+.pill-right{
+    background: white;
+    margin-top: 50px;
+}
+
+div.pill-right h2, div.pill-right p{
+    padding: 10px;
+    margin: 0;
+}
+
+div.pill-right div:last-child div{
+    display: inline-block;
+    margin: 0;
+    color: rgb(201, 201, 201);
+}
+
+.pill-right div:last-child div:first-child{
+    padding-left: 10px;
+}
+
+.pill-right div:last-child div:nth-child(2){
+    display: inline-block;
+    width: 90%;
+}
+
+img.pill-leftside {
+    width: 33%;
+    
+}
+
+img.pill-rightside{
+    width: 100%;
+    height: 400px;
+}
+
