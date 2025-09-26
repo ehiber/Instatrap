@@ -1,0 +1,35 @@
+name: Verificación por Rúbrica
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      modulo:
+        description: 'Módulo a evaluar'
+        required: true
+        default: 'modulo1'
+      rubricaRef:
+        description: 'Ref de fs-rubricas'
+        required: false
+        default: 'main'
+      useAI:
+        description: 'Usar IA (4Geeks)'
+        required: false
+        default: 'false'
+  repository_dispatch:
+    types: [4geeks_submission]
+
+jobs:
+  call-grade:
+    uses: org/actions/.github/workflows/grade.yml@v1
+    with:
+      module: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.module || github.event.inputs.modulo || 'modulo1' }}
+      rubricRepo: org-o-usuario/fs-rubricas
+      rubricRef: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.rubricaRef || 'main') || (github.event.inputs.rubricaRef || 'main') }}
+      useAI: ${{ (github.event_name == 'repository_dispatch' && github.event.client_payload.useAI) || (github.event.inputs.useAI == 'true') }}
+    secrets:
+      FOURGEEKS_OPENAI_API_KEY: ${{ secrets.FOURGEEKS_OPENAI_API_KEY }}
+      FOURGEEKS_OPENAI_BASE_URL: ${{ secrets.FOURGEEKS_OPENAI_BASE_URL }}
